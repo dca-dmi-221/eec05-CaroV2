@@ -26,10 +26,20 @@ let testWordsList = [
 ];
 
 // pruebe para cada palabra A, B y C
-function wordSearcherIgnoreCase(targetWord, wordsList) {
-   // :)
+function wordSearcherIgnoreCase(targetWord, wordList) {
+   const newWordList = wordList.map(word => word.toLowerCase)
+
+   if (newWordList.includes(targetWord.toUpperCase())){
+       console.log("La palabra " + targetWord + " si está incluida.")
+   }
+   else {
+        console.log("La palabra " + targetWord + " no está incluida.")
+   }
 }
 
+wordSearcherIgnoreCase(testTargetWordA, testWordsList);
+wordSearcherIgnoreCase(testTargetWordB, testWordsList);
+wordSearcherIgnoreCase(testTargetWordC, testWordsList);
 
 
 /*Dado un arreglo de strings, retornar la palabra más larga,
